@@ -13,9 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Documentation",
+  metadataBase: new URL("https://megent.dev"),
+  title: {
+    default: "Documentation",
+    template: "%s | Megent Docs",
+  },
+  applicationName: "Megent",
   description:
     "Complete Megent SDK documentation. Learn how to control AI agents with policy YAML, enforce runtime rules, mask PII, and implement governance across Python, TypeScript, LangChain, CrewAI, and OpenAI frameworks.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical: "/doc",
   },
@@ -33,8 +42,9 @@ export const metadata: Metadata = {
     title: "Megent Documentation",
     description:
       "Complete guides and API reference for controlling AI agents with Megent - policy enforcement, PII masking, and governance.",
-    url: "https://megent.dev/doc",
+    url: "/doc",
     siteName: "Megent",
+    locale: "en_US",
     type: "website",
     images: [
       {
